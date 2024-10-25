@@ -1,0 +1,12 @@
+void ilkvesonusil(struct batuhan **head){
+    struct batuhan *temp;
+    temp=head;
+    *head=*head->sonraki;
+    temp->sonraki=NULL;
+    free(temp); struct batuhan *temp2=*head;
+    while (temp2->sonraki->sonraki!=NULL){
+temp2=temp2->sonraki;
+
+    }
+    temp2->sonraki=NULL;
+    free(temp2->sonraki->sonraki);
