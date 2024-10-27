@@ -1,0 +1,21 @@
+int dengelimi(batuhan *kök,batuhan *node){
+    
+    if(kök==NULL){
+        return 1;
+        
+    }
+  int sol=dengelimi(kök,node->sol);
+    int sag=dengelimi(kök,node->sag);
+if(kök==node){
+    if(sol-sag<-1 && sol-sag>1)
+    return 1 
+}
+
+if (sol>sag)
+return 1+sol;
+
+if (sag>sol || sag=sol)
+return 1+sag;
+    
+    
+}
